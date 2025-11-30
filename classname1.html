@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+
+        <style>
+            .card {
+                width: 200px;
+                height: 150px;
+                background-color: olivedrab;
+                margin: 10px;
+                transition: transform 0.3s;
+
+            }
+
+            .zoom {
+                transform: scale(3.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIse9gCo69kgKGPdBCP7LcDO5ee0my8_VOew&s">
+        </div>
+         <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIse9gCo69kgKGPdBCP7LcDO5ee0my8_VOew&s">
+        </div>
+     
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <button onclick="zoomimg()">Click</button>
+
+        <script>
+            function zoomimg() {
+                const cards = document.getElementsByClassName("card")
+
+                for(let i = 0; i<cards.length; i++){
+                    cards[i].classList.toggle("zoom")
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

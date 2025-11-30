@@ -1,0 +1,73 @@
+<!-- append()
+ append is used to insert the content at the end of the element
+ we can insert muliple elements at once
+-->
+
+
+<!-- appenchild -> we can insert only one node or one element -->
+
+<!-- <div id="divele"></div>
+<button onclick="addContent()">Add Content</button>
+
+<script>
+    function addContent() {
+        const divele = document.getElementById("divele");
+
+        const ele = document.createElement("p")
+        ele.textContent = "this is paragraph";
+
+        
+        const div = document.createElement("div")
+        div.textContent = "this is div element";
+
+          const section = document.createElement("section")
+        section.textContent = "this is section element";
+
+        // divele.append(ele, div, section)
+        divele.appendChild(ele, div, section)
+    }
+
+
+
+</script> -->
+
+
+
+<ul id = "myTasks"></ul>
+<button onclick="addItem()">Message </button>
+
+<script>
+    function addItem() {
+        const list = document.getElementById("myTasks");
+        const  li = document.createElement("li")
+        li.textContent = "New Task";
+        list.append(li)
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div id = "priya">
+    <p>hello priya <span style="display: none;">xyzzzzzz</span></p>
+</div>
+
+<script>
+    const div = document.getElementById("priya")
+    console.log(div.innerText)
+    console.log(div.textContent); //hidden elements
+    console.log(div.innerHTML)
+</script> -->

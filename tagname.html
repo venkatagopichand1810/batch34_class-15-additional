@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>Apple</p>
+    <p>orange</p>
+    <p>banana</p>
+
+    <button onclick="clickMe()">Click me</button>
+
+    <script>
+        function clickMe() {
+            const tags = document.getElementsByTagName("p");
+            for(let i = 0; i<tags.length; i++){
+                tags[i].style.color = "orange"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 1) document.getElementById
+ 2) document.getElementsByClassName
+ 3) document.getElementsByTagName
+  -->

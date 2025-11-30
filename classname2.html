@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .task {
+            padding: 10px;
+            color: red;
+            background-color: rgb(175, 229, 14);
+            margin: 10px;
+
+        }
+
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="task completed">go to gym </div>
+    <div class="task">go to movie </div>
+    <div class="task completed" >read html</div>
+    <div class="task">go to mall </div>
+    <div class="task">read javascript</div>
+
+    <button onclick="showCompleted()">Show only completed tasks</button>
+     <button onclick="shownotCompleted()">Show not completed tasks</button>
+     <button onclick="showAll()">Show All</button>
+     <div style="display: none;">venkat</div>
+
+    
+    <script>
+        function showCompleted() {
+            const tasks = document.getElementsByClassName("task");
+            const completed = document.getElementsByClassName("completed")
+
+            for(let i = 0; i<tasks.length; i++){
+                if(tasks[i].classList.contains("completed")) {
+                    tasks[i].style.display = "block"
+                } else {
+                    tasks[i].style.display = "none"
+                }
+            }
+        }
+
+         function shownotCompleted() {
+            const tasks = document.getElementsByClassName("task");
+
+            for(let i = 0; i<tasks.length; i++){
+                if(!tasks[i].classList.contains("completed")) {
+                    tasks[i].style.display = "block"
+                } else {
+                    tasks[i].style.display = "none"
+                }
+            }
+        }
+
+
+        function showAll() {
+            const tasks = document.getElementsByClassName('task');
+             for(let i = 0; i<tasks.length; i++){
+                 tasks[i].style.display = "block";
+             }
+        }
+    </script>
+
+</body>
+
+</html>

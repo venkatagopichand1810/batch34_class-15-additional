@@ -1,0 +1,43 @@
+<nav>
+    <a class="nav-link">Home</a>
+    <a class="nav-link">Products</a>
+    <a class="nav-link">Contact</a>
+</nav>
+
+<script>
+    // const links = document.querySelector(".nav-link");
+    // links.style.color = "blue";
+    // links.style.fontWeight = "bold";
+
+    const links = document.querySelectorAll(".nav-link");
+    console.log(links)
+
+    links.forEach(link => {
+        link.style.color = "blue";
+        link.style.fontWeight = "bold";
+    })
+
+
+
+</script>
+
+<!-- querySelector will select only the first element
+ 
+querySelectorAll it is going to select all the elements and it is going to apply styles for all the elements
+-->
+
+
+
+
+<!--
+ document.getElementbyClassname will only selects the elements with classname
+ forloop or foreach
+
+ document.queryselectorAll will select the elements 
+ 1) id
+ 2) classname
+ 3) tagname
+
+
+
+-->

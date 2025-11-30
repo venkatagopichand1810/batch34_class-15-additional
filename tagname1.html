@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input type="text" placeholder="Enter your name" />
+        <input type="email" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" />
+
+        <button onclick="validateForm()">Click</button>
+
+        <p id = "msg"></p>
+        <script>
+            function validateForm() {
+                // select all the input fields
+                let inputs = document.getElementsByTagName("input");
+
+                for(let i = 0; i<inputs.length; i++){
+                   if(inputs[i].value === "") {
+                    document.getElementsByTagName("msg").innerText = "Please fill all the fields";
+                    return; //it will stop the execution
+                   } 
+                }
+                document.getElementById("msg").innerText = "Form submitted successfully!"
+            }
+        </script>
+
+
+    </body>
+</html>
